@@ -14,7 +14,7 @@ async function confirmedStay(userId: number): Promise<ApplicationError | boolean
   if (!isThereTicket) throw notFoundError();
 
   if(isThereTicket.status !== TicketStatus.PAID) throw { name: "Ticket was not paid" };
-  if(isThereTicket.TicketType.isRemote === true) throw { name: "Ticket id remote" };
+  if(isThereTicket.TicketType.isRemote === true) throw { name: "Ticket is remote" };
   if(isThereTicket.TicketType.includesHotel === false) throw { name: "Hotel not include" };
 
   return null;
