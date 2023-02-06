@@ -1,21 +1,21 @@
-import 'reflect-metadata';
-import 'express-async-errors';
+import "reflect-metadata";
+import "express-async-errors";
 
-import cors from 'cors';
-import express, { Express } from 'express';
+import cors from "cors";
+import express, { Express } from "express";
 
-import { connectDb, disconnectDB, loadEnv } from '@/config';
-import { handleApplicationErrors } from '@/middlewares';
+import { connectDb, disconnectDB, loadEnv } from "@/config";
+import { handleApplicationErrors } from "@/middlewares";
 import {
-    authenticationRouter,
-    enrollmentsRouter,
-    eventsRouter,
-    paymentsRouter,
-    ticketsRouter,
-    usersRouter
-} from '@/routers';
+  authenticationRouter,
+  enrollmentsRouter,
+  eventsRouter,
+  paymentsRouter,
+  ticketsRouter,
+  usersRouter,
+} from "@/routers";
 
-import { hotelsRouter } from './routers/hotels-router';
+import { hotelsRouter } from "./routers/hotels-router";
 
 loadEnv();
 

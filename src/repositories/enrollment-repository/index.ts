@@ -1,5 +1,5 @@
-import { prisma } from '@/config';
-import { Enrollment } from '@prisma/client';
+import { prisma } from "@/config";
+import { Enrollment } from "@prisma/client";
 
 async function findWithAddressByUserId(userId: number) {
   return prisma.enrollment.findFirst({
@@ -12,7 +12,7 @@ async function findWithAddressByUserId(userId: number) {
 
 async function findById(enrollmentId: number) {
   return prisma.enrollment.findFirst({
-    where: { id: enrollmentId }
+    where: { id: enrollmentId },
   });
 }
 
@@ -32,7 +32,7 @@ async function upsert(
 
 async function findByUserId(userIdFetched: number) {
   return prisma.enrollment.findFirst({
-    where: { userId: userIdFetched }
+    where: { userId: userIdFetched },
   });
 }
 
@@ -43,7 +43,7 @@ const enrollmentRepository = {
   findWithAddressByUserId,
   upsert,
   findById,
-  findByUserId
+  findByUserId,
 };
 
 export default enrollmentRepository;

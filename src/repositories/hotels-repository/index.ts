@@ -1,5 +1,5 @@
-import { prisma } from '@/config';
-import { Hotel } from '@prisma/client';
+import { prisma } from "@/config";
+import { Hotel } from "@prisma/client";
 
 async function findHotelsList(): Promise<Hotel[]> {
   return prisma.hotel.findMany();
@@ -14,7 +14,7 @@ async function findHotelById(holteId: number): Promise<Hotel> {
       Rooms: true,
     },
   });
-} 
+}
 
 const hotelRepository = {
   findHotelsList,
