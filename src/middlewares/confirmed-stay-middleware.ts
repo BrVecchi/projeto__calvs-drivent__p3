@@ -23,5 +23,5 @@ function generateNotFoundResponse(res: Response){
 }
 
 function generatePaymentRequiredResponse(res: Response){
-    res.status(httpStatus.NOT_FOUND).send({});
+    res.status(httpStatus.PAYMENT_REQUIRED).send({});
 }
